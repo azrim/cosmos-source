@@ -1,0 +1,68 @@
+{
+  "cosmos-installer": {
+    "form": [
+      {
+        "name": "downloadPath",
+        "label": "Path to downloads directory",
+        "initialValue": "/home/azrim/Downloads",
+        "type": "text"
+      }
+    ]
+  },
+  "minVersion": "0.7.6",
+  "services": {
+    "{ServiceName}": {
+      "image": "lscr.io/linuxserver/qbittorrent:latest",
+      "container_name": "{ServiceName}",
+      "hostname": "{ServiceName}",
+      "restart": "unless-stopped",
+      "UID": 1000,
+      "GID": 1000,
+      "environment": [
+        "PUID=1000",
+        "PGID=1000",
+        "TZ=auto",
+        "WEBUI_PORT=8080"
+      ],
+      "ports": [
+        "8080:8080/tcp",
+        "6881:6881/tcp",
+        "6881:6881/udp"
+      ],
+      "labels": {
+        "cosmos-force-network-secured": "true",
+        "cosmos-auto-update": "true",
+        "cosmos-icon": "https://upload.wikimedia.org/wikipedia/commons/6/66/New_qBittorrent_Logo.svg"
+      },
+      "volumes": [
+        {
+          "source": "{DefaultDataPath}/qbittorrent/config",
+          "target": "/config",
+          "type": "bind"
+        }
+        {if Context.downloadPath}
+        , {
+          "source": "{Context.downloadPath}",
+          "target": "/downloads",
+          "type": "bind"
+        }
+        {/if}
+      ],
+      "routes": [
+        {
+          "name": "{ServiceName}",
+          "description": "Expose {ServiceName} to the web",
+          "useHost": true,
+          "target": "http://{ServiceName}:8080",
+          "mode": "SERVAPP",
+          "Timeout": 14400000,
+          "ThrottlePerMinute": 12000,
+          "BlockCommonBots": true,
+          "SmartShield": {
+            "Enabled": true
+          }
+        }
+      ]
+    }
+  }
+}

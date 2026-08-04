@@ -1,0 +1,21 @@
+{
+  "name": "Jellyfin",
+  "description": "Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media.",
+  "longDescription": "<p>Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to proprietary media servers, allowing you to stream media to end-user devices via multiple client applications, web browsers, DLNA, and Chromecast.</p><p>There are no strings attached, no premium licenses or features, and no hidden agendas. Stream your movies, TV shows, music, photos, and live TV from your own server to any device.</p>",
+  "tags": [
+    "media",
+    "server",
+    "streaming",
+    "movies",
+    "tv",
+    "music",
+    "photos",
+    "videos"
+  ],
+  "repository": "https://github.com/jellyfin/jellyfin",
+  "image": "https://hub.docker.com/r/linuxserver/jellyfin",
+  "supported_architectures": [
+    "amd64",
+    "arm64"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Navidrome",
+  "description": "Navidrome is an open source web-based music collection server and streamer. It gives you freedom to listen to your music collection from any browser or mobile device.",
+  "tags": ["music", "audio", "streaming", "server", "subsonic", "media"],
+  "repository": "https://github.com/navidrome/navidrome",
+  "image": "https://hub.docker.com/r/deluan/navidrome",
+  "supported_architectures": ["amd64", "arm64", "arm"]
+}

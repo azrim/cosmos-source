@@ -1,0 +1,58 @@
+{
+  "cosmos-installer": {
+    "form": [
+      {
+        "name": "animePath",
+        "label": "Path to anime library",
+        "initialValue": "/home/azrim/Videos/anime",
+        "type": "text"
+      }
+    ]
+  },
+  "minVersion": "0.7.6",
+  "services": {
+    "{ServiceName}": {
+      "image": "ghcr.io/shokoanime/server:latest",
+      "container_name": "{ServiceName}",
+      "hostname": "{ServiceName}",
+      "restart": "unless-stopped",
+      "environment": [
+        "TZ=auto"
+      ],
+      "labels": {
+        "cosmos-force-network-secured": "true",
+        "cosmos-auto-update": "true",
+        "cosmos-icon": "https://shokoanime.com/icon.png"
+      },
+      "volumes": [
+        {
+          "source": "{DefaultDataPath}/shoko/config",
+          "target": "/home/shoko/.shoko",
+          "type": "bind"
+        }
+        {if Context.animePath}
+        , {
+          "source": "{Context.animePath}",
+          "target": "/mnt/anime",
+          "type": "bind"
+        }
+        {/if}
+      ],
+      "routes": [
+        {
+          "name": "{ServiceName}",
+          "description": "Expose {ServiceName} to the web",
+          "useHost": true,
+          "target": "http://{ServiceName}:8111",
+          "mode": "SERVAPP",
+          "Timeout": 14400000,
+          "ThrottlePerMinute": 12000,
+          "BlockCommonBots": true,
+          "SmartShield": {
+            "Enabled": true
+          }
+        }
+      ]
+    }
+  }
+}

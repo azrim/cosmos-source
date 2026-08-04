@@ -1,0 +1,19 @@
+{
+  "name": "Hermes Agent",
+  "description": "Autonomous AI agent by Nous Research with persistent memory, self-improving skills, and 24/7 operation.",
+  "longDescription": "<p>Autonomous AI agent by Nous Research with persistent memory, self-improving skills, and 24/7 operation.</p>",
+  "tags": [
+    "ai",
+    "agent",
+    "autonomous",
+    "nous-research",
+    "hermes",
+    "llm"
+  ],
+  "repository": "https://github.com/NousResearch/hermes-agent",
+  "image": "https://ghcr.io/nousresearch/hermes-agent",
+  "supported_architectures": [
+    "amd64",
+    "arm64"
+  ]
+}

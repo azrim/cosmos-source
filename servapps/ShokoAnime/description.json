@@ -1,0 +1,20 @@
+{
+  "name": "Shoko Anime",
+  "description": "Shoko is an anime cataloging and management program designed to automate the cataloging of your anime collection.",
+  "longDescription": "<p>Shoko is a centralized anime management system designed to automate the cataloging and organization of your anime collection.</p><p>By integrating directly with AniDB, Shoko uses precise file hashing (CRC32) to accurately identify files regardless of filename, fetching detailed metadata, episode information, character lists, and artwork.</p><p>Key features include:</p><ul><li><strong>AniDB Integration:</strong> Automatic identification and metadata matching powered by AniDB.</li><li><strong>Multi-Client Support:</strong> Works as a backend server for Web UI, Shoko Desktop, Jellyfin, Plex, and Emby plugins.</li><li><strong>File Organization:</strong> Automates file renaming, moving, and duplicate management.</li><li><strong>Comprehensive Management:</strong> Tracks watch status, series relations, episode groups, and missing file alerts.</li></ul>",
+  "tags": [
+    "anime",
+    "media",
+    "catalog",
+    "anidb",
+    "management",
+    "library",
+    "metadata"
+  ],
+  "repository": "https://github.com/ShokoAnime/ShokoServer",
+  "image": "https://github.com/ShokoAnime/ShokoServer/pkgs/container/server",
+  "supported_architectures": [
+    "amd64",
+    "arm64"
+  ]
+}

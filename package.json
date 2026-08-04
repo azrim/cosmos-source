@@ -1,0 +1,11 @@
+{
+  "name": "azrim-cosmos-source",
+  "version": "1.0.0",
+  "description": "Custom Cosmos Cloud marketplace source for azrim's self-hosted apps",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "node src/index.js"
+  },
+  "author": "azrim",
+  "license": "MIT"
+}

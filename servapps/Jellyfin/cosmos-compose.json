@@ -1,0 +1,101 @@
+{
+  "cosmos-installer": {
+    "form": [
+      {
+        "name": "moviePath",
+        "label": "What is the path to your movies? (leave empty to not mount anything)",
+        "initialValue": "/home/azrim/Videos/movies",
+        "type": "text"
+      },
+      {
+        "name": "seriePath",
+        "label": "What is the path to your series? (leave empty to not mount anything)",
+        "initialValue": "/home/azrim/Videos/series",
+        "type": "text"
+      },
+      {
+        "name": "animePath",
+        "label": "What is the path to your anime? (leave empty to not mount anything)",
+        "initialValue": "/home/azrim/Videos/anime",
+        "type": "text"
+      },
+      {
+        "name": "musicPath",
+        "label": "What is the path to your music? (leave empty to not mount anything)",
+        "initialValue": "/home/azrim/Music",
+        "type": "text"
+      }
+    ]
+  },
+  "minVersion": "0.7.6",
+  "services": {
+    "{ServiceName}": {
+      "image": "lscr.io/linuxserver/jellyfin:latest",
+      "container_name": "{ServiceName}",
+      "restart": "unless-stopped",
+      "UID": 1000,
+      "GID": 1000,
+      "environment": [
+        "PUID=1000",
+        "PGID=1000",
+        "TZ=Asia/Jakarta"
+      ],
+      "labels": {
+        "cosmos-force-network-secured": "true",
+        "cosmos-auto-update": "true",
+        "cosmos-icon": "https://azukaar.github.io/cosmos-servapps-official/servapps/Jellyfin/icon.png"
+      },
+      "volumes": [
+        {
+          "source": "{DefaultDataPath}/jellyfin/config",
+          "target": "/config",
+          "type": "bind"
+        }
+        {if Context.moviePath}
+        , {
+          "source": "{Context.moviePath}",
+          "target": "/data/movies",
+          "type": "bind"
+        }
+        {/if}
+        {if Context.seriePath}
+        , {
+          "source": "{Context.seriePath}",
+          "target": "/data/tvshows",
+          "type": "bind"
+        }
+        {/if}
+        {if Context.animePath}
+        , {
+          "source": "{Context.animePath}",
+          "target": "/data/anime",
+          "type": "bind"
+        }
+        {/if}
+        {if Context.musicPath}
+        , {
+          "source": "{Context.musicPath}",
+          "target": "/data/music",
+          "type": "bind"
+        }
+        {/if}
+      ],
+      "routes": [
+        {
+          "name": "{ServiceName}",
+          "description": "Expose {ServiceName} to the web",
+          "useHost": true,
+          "target": "http://{ServiceName}:8096",
+          "mode": "SERVAPP",
+          "Timeout": 14400000,
+          "ThrottlePerMinute": 12000,
+          "BlockCommonBots": true,
+          "SmartShield": {
+            "Enabled": true,
+            "PerUserRequestLimit": 25000
+          }
+        }
+      ]
+    }
+  }
+}

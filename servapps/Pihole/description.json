@@ -1,0 +1,9 @@
+{
+  "name": "Pi-hole",
+  "description": "Pi-hole is a network-wide ad blocker that acts as a DNS sinkhole, protecting your devices from unwanted ads and trackers without installing any client-side software.",
+  "longDescription": "<p>Pi-hole is a Linux network-level advertisement and Internet tracker blocking application which acts as a DNS sinkhole and optionally a DHCP server, intended for use on a private network. It is designed for low-power embedded devices with network capability, such as the Raspberry Pi, but can be installed on almost any Linux machine.</p><p>Pi-hole blocks ads for all devices on your network without requiring any client-side software. It features a beautiful web-based admin interface for managing and monitoring your DNS queries, blocklists, and whitelists. With Pi-hole, you can also see statistics about the DNS queries on your network, including the number of queries blocked and the domains most frequently accessed.</p>",
+  "tags": ["dns", "ad-blocker", "network", "privacy", "sinkhole", "tracker-blocking", "pihole", "self-hosted"],
+  "repository": "https://github.com/pi-hole/pi-hole",
+  "image": "https://hub.docker.com/r/pihole/pihole",
+  "supported_architectures": ["amd64", "arm64"]
+}

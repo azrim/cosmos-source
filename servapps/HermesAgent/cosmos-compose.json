@@ -1,0 +1,41 @@
+{
+  "minVersion": "0.7.6",
+  "services": {
+    "{ServiceName}": {
+      "image": "ghcr.io/nousresearch/hermes-agent:latest",
+      "container_name": "{ServiceName}",
+      "hostname": "{ServiceName}",
+      "restart": "unless-stopped",
+      "environment": [
+        "TZ=auto"
+      ],
+      "labels": {
+        "cosmos-force-network-secured": "true",
+        "cosmos-auto-update": "true",
+        "cosmos-icon": "https://raw.githubusercontent.com/NousResearch/hermes-agent/main/docs/hermes-icon.png"
+      },
+      "volumes": [
+        {
+          "source": "{DefaultDataPath}/hermes",
+          "target": "/root/.hermes",
+          "type": "bind"
+        }
+      ],
+      "routes": [
+        {
+          "name": "{ServiceName}",
+          "description": "Expose {ServiceName} to the web",
+          "useHost": true,
+          "target": "http://{ServiceName}:8642",
+          "mode": "SERVAPP",
+          "Timeout": 14400000,
+          "ThrottlePerMinute": 12000,
+          "BlockCommonBots": true,
+          "SmartShield": {
+            "Enabled": true
+          }
+        }
+      ]
+    }
+  }
+}

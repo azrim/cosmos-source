@@ -1,0 +1,64 @@
+{
+  "cosmos-installer": {
+    "form": [
+      {
+        "name": "musicPath",
+        "label": "Path to your music library",
+        "initialValue": "/home/azrim/Music",
+        "type": "text"
+      }
+    ]
+  },
+  "minVersion": "0.7.6",
+  "services": {
+    "{ServiceName}": {
+      "image": "deluan/navidrome:latest",
+      "container_name": "{ServiceName}",
+      "hostname": "{ServiceName}",
+      "restart": "unless-stopped",
+      "environment": [
+        "PUID=1000",
+        "PGID=1000",
+        "TZ=auto",
+        "ND_SCANSCHEDULE=1h",
+        "ND_LOGLEVEL=info",
+        "ND_BASEURL=/"
+      ],
+      "labels": {
+        "cosmos-force-network-secured": "true",
+        "cosmos-auto-update": "true",
+        "cosmos-icon": "https://raw.githubusercontent.com/navidrome/navidrome/master/resources/logo-192x192.png"
+      },
+      "volumes": [
+        {
+          "source": "{DefaultDataPath}/navidrome/config",
+          "target": "/data",
+          "type": "bind"
+        }
+        {if Context.musicPath}
+        , {
+          "source": "{Context.musicPath}",
+          "target": "/music",
+          "type": "bind",
+          "read_only": true
+        }
+        {/if}
+      ],
+      "routes": [
+        {
+          "name": "{ServiceName}",
+          "description": "Expose {ServiceName} to the web",
+          "useHost": true,
+          "target": "http://{ServiceName}:4533",
+          "mode": "SERVAPP",
+          "Timeout": 14400000,
+          "ThrottlePerMinute": 12000,
+          "BlockCommonBots": true,
+          "SmartShield": {
+            "Enabled": true
+          }
+        }
+      ]
+    }
+  }
+}

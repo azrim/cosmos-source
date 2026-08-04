@@ -1,0 +1,62 @@
+{
+  "cosmos-installer": {
+    "form": [
+      {
+        "name": "webPassword",
+        "label": "Set a password for the Pi-hole admin dashboard",
+        "initialValue": "{Passwords.0}",
+        "type": "text"
+      }
+    ]
+  },
+  "minVersion": "0.7.6",
+  "services": {
+    "{ServiceName}": {
+      "image": "pihole/pihole:latest",
+      "container_name": "{ServiceName}",
+      "hostname": "{ServiceName}",
+      "restart": "unless-stopped",
+      "environment": [
+        "TZ=auto",
+        "WEBPASSWORD={Context.webPassword}",
+        "DNSMASQ_LISTENING=all"
+      ],
+      "ports": [
+        "53:53/tcp",
+        "53:53/udp"
+      ],
+      "labels": {
+        "cosmos-force-network-secured": "true",
+        "cosmos-auto-update": "true",
+        "cosmos-icon": "https://azukaar.github.io/cosmos-servapps-official/servapps/Pihole/icon.png"
+      },
+      "volumes": [
+        {
+          "source": "{DefaultDataPath}/pihole/etc-pihole",
+          "target": "/etc/pihole",
+          "type": "bind"
+        },
+        {
+          "source": "{DefaultDataPath}/pihole/etc-dnsmasq.d",
+          "target": "/etc/dnsmasq.d",
+          "type": "bind"
+        }
+      ],
+      "routes": [
+        {
+          "name": "{ServiceName}",
+          "description": "Expose {ServiceName} admin to the web",
+          "useHost": true,
+          "target": "http://{ServiceName}:80",
+          "mode": "SERVAPP",
+          "Timeout": 14400000,
+          "ThrottlePerMinute": 12000,
+          "BlockCommonBots": true,
+          "SmartShield": {
+            "Enabled": true
+          }
+        }
+      ]
+    }
+  }
+}

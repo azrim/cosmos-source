@@ -1,0 +1,18 @@
+{
+  "name": "qBittorrent",
+  "description": "qBittorrent is a free, open-source BitTorrent client. It aims to provide an open-source software alternative to µTorrent.",
+  "longDescription": "<p>qBittorrent is a free, open-source BitTorrent client. It aims to provide an open-source software alternative to µTorrent.</p><p>The qBittorrent project aims to provide an open-source software alternative to µTorrent. Additionally, qBittorrent runs and provides the same features on all major platforms (Linux, macOS, Windows, OS/2, FreeBSD). qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.</p>",
+  "tags": [
+    "torrent",
+    "download",
+    "bittorrent",
+    "p2p",
+    "file sharing"
+  ],
+  "repository": "https://github.com/qbittorrent/qBittorrent",
+  "image": "https://hub.docker.com/r/linuxserver/qbittorrent",
+  "supported_architectures": [
+    "amd64",
+    "arm64"
+  ]
+}

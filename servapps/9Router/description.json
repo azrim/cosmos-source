@@ -1,0 +1,20 @@
+{
+  "name": "9Router",
+  "description": "Smart AI routing gateway that manages API keys, subscriptions, and rate limits with 3-tier fallback for cost optimization.",
+  "longDescription": "<p>Smart AI routing gateway that manages API keys, subscriptions, and rate limits with 3-tier fallback for cost optimization.</p>",
+  "tags": [
+    "ai",
+    "router",
+    "api",
+    "gateway",
+    "llm",
+    "proxy",
+    "cost-optimization"
+  ],
+  "repository": "https://github.com/decolua/9router",
+  "image": "https://ghcr.io/decolua/9router",
+  "supported_architectures": [
+    "amd64",
+    "arm64"
+  ]
+}
