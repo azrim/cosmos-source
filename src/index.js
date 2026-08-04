@@ -1,63 +1,71 @@
 const fs = require('fs');
 const path = require('path');
+const configFile = require('../config.json');
 
-const servappsDir = path.join(__dirname, '..', 'servapps');
-const outputDir = path.join(__dirname, '..'); 
+let servappsJSON = [];
 
-const apps = [];
+let repoURL = configFile.pageUrl;
+let servappsFolder = configFile.servappsFolder;
+let rootDir = path.join(__dirname, '..');
 
-const folders = fs.readdirSync(servappsDir).filter(f => {
-  return fs.statSync(path.join(servappsDir, f)).isDirectory();
-});
+// list all directories in the directory servapps and compile them in servapps.json
+const servappsPath = path.join(rootDir, servappsFolder);
+const servapps = fs.readdirSync(servappsPath).filter(file => fs.lstatSync(path.join(servappsPath, file)).isDirectory());
 
-for (const folder of folders) {
-  const descPath = path.join(servappsDir, folder, 'description.json');
-  const composePath = path.join(servappsDir, folder, 'cosmos-compose.json');
+for (const file of servapps) {
+  const servapp = require(path.join(servappsPath, file, 'description.json'));
+  servapp.id = file;
+  servapp.screenshots = [];
+  servapp.artefacts = {};
 
-  if (!fs.existsSync(descPath) || !fs.existsSync(composePath)) {
-    console.warn(`Skipping ${folder}: missing description.json or cosmos-compose.json`);
+  // list all screenshots in the directory servapps/${file}/screenshots
+  const screenshotsPath = path.join(servappsPath, file, 'screenshots');
+  if (fs.existsSync(screenshotsPath)) {
+    const screenshots = fs.readdirSync(screenshotsPath);
+    for (const screenshot of screenshots) {
+      servapp.screenshots.push(`${repoURL}/${servappsFolder}/${file}/screenshots/${screenshot}`);
+    }
+  }
+
+  const artefactsPath = path.join(servappsPath, file, 'artefacts');
+  if (fs.existsSync(artefactsPath)) {
+    const artefacts = fs.readdirSync(artefactsPath);
+    for (const artefact of artefacts) {
+      servapp.artefacts[artefact] = (`${repoURL}/${servappsFolder}/${file}/artefacts/${artefact}`);
+    }
+  }
+
+  let composeFileName = "cosmos-compose.json";
+  if (!fs.existsSync(path.join(servappsPath, file, composeFileName))) {
+    composeFileName = "docker-compose.yml";
+  }
+  if (!fs.existsSync(path.join(servappsPath, file, composeFileName))) {
+    console.error(`No compose file found for ${file}`);
     continue;
   }
 
-  const description = JSON.parse(fs.readFileSync(descPath, 'utf8'));
-  const compose = fs.readFileSync(composePath, 'utf8');
-
-  // Check for icon
-  let icon = description.icon || '';
-  const iconPath = path.join(servappsDir, folder, 'icon.png');
-  if (fs.existsSync(iconPath)) {
-    icon = `servapps/${folder}/icon.png`;
+  // Check if icon.png exists locally, else fallback to external icon URL from description if present
+  const localIconPath = path.join(servappsPath, file, 'icon.png');
+  if (fs.existsSync(localIconPath)) {
+    servapp.icon = `${repoURL}/${servappsFolder}/${file}/icon.png`;
+  } else if (!servapp.icon) {
+    // If no icon in description either, just leave it or set a default
+    servapp.icon = "";
   }
 
-  let parsedCompose = null;
-  try {
-    parsedCompose = JSON.parse(compose);
-  } catch (e) {
-    // Some compose files have Whiskers {if} tags which makes them invalid JSON
-    console.warn(`Note: Could not parse ${folder}/cosmos-compose.json as strict JSON due to templating.`);
-  }
+  servapp.compose = `${repoURL}/${servappsFolder}/${file}/${composeFileName}`;
 
-  apps.push({
-    name: description.name,
-    description: description.description,
-    longDescription: description.longDescription || '',
-    tags: description.tags || [],
-    repository: description.repository || '',
-    image: description.image || '',
-    supported_architectures: description.supported_architectures || ['amd64', 'arm64'],
-    icon: icon,
-    compose: composePath.replace(/\\/g, '/').replace(/.*servapps\//, 'servapps/'),
-    config: parsedCompose
-  });
-
-  console.log(`✅ Added: ${description.name}`);
+  servappsJSON.push(servapp);
+  console.log(`✅ Added: ${servapp.name}`);
 }
 
-// Write servapps.json
-fs.writeFileSync(
-  path.join(outputDir, 'servapps.json'),
-  JSON.stringify(apps, null, 2),
-  'utf8'
-);
+let apps = {
+  "source": configFile.marketIndexUrl,
+  "showcase": servappsJSON.slice(0, 3), // Just showcase the first 3 for the example
+  "all": servappsJSON
+};
 
-console.log(`\n🎉 Generated servapps.json with ${apps.length} apps`);
+fs.writeFileSync(path.join(rootDir, 'servapps.json'), JSON.stringify(servappsJSON, null, 2));
+fs.writeFileSync(path.join(rootDir, 'index.json'), JSON.stringify(apps, null, 2));
+
+console.log(`\n🎉 Generated servapps.json and index.json with ${servappsJSON.length} apps`);

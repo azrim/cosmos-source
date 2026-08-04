@@ -1,0 +1,277 @@
+{
+  "source": "https://azrim.github.io/cosmos-source/servapps.json",
+  "showcase": [
+    {
+      "name": "9Router",
+      "description": "Smart AI routing gateway that manages API keys, subscriptions, and rate limits with 3-tier fallback for cost optimization.",
+      "longDescription": "<p>Smart AI routing gateway that manages API keys, subscriptions, and rate limits with 3-tier fallback for cost optimization.</p>",
+      "tags": [
+        "ai",
+        "router",
+        "api",
+        "gateway",
+        "llm",
+        "proxy",
+        "cost-optimization"
+      ],
+      "repository": "https://github.com/decolua/9router",
+      "image": "https://ghcr.io/decolua/9router",
+      "supported_architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "id": "9Router",
+      "screenshots": [],
+      "artefacts": {},
+      "icon": "",
+      "compose": "https://azrim.github.io/cosmos-source/servapps/9Router/cosmos-compose.json"
+    },
+    {
+      "name": "Hermes Agent",
+      "description": "Autonomous AI agent by Nous Research with persistent memory, self-improving skills, and 24/7 operation.",
+      "longDescription": "<p>Autonomous AI agent by Nous Research with persistent memory, self-improving skills, and 24/7 operation.</p>",
+      "tags": [
+        "ai",
+        "agent",
+        "autonomous",
+        "nous-research",
+        "hermes",
+        "llm"
+      ],
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "image": "https://ghcr.io/nousresearch/hermes-agent",
+      "supported_architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "id": "HermesAgent",
+      "screenshots": [],
+      "artefacts": {},
+      "icon": "",
+      "compose": "https://azrim.github.io/cosmos-source/servapps/HermesAgent/cosmos-compose.json"
+    },
+    {
+      "name": "Immich (No ML)",
+      "description": "Self-hosted photo and video management solution without machine learning. High performance backup and organization for your photos.",
+      "longDescription": "<p>Immich (No ML) is a self-hosted photo and video management solution running without machine learning services. High performance backup and organization for your photos.</p>",
+      "tags": [
+        "photos",
+        "videos",
+        "backup",
+        "gallery",
+        "self-hosted",
+        "google-photos-alternative"
+      ],
+      "repository": "https://github.com/immich-app/immich",
+      "image": "https://azukaar.github.io/cosmos-servapps-official/servapps/Immich/icon.png",
+      "supported_architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "id": "Immich",
+      "screenshots": [],
+      "artefacts": {},
+      "icon": "",
+      "compose": "https://azrim.github.io/cosmos-source/servapps/Immich/cosmos-compose.json"
+    }
+  ],
+  "all": [
+    {
+      "name": "9Router",
+      "description": "Smart AI routing gateway that manages API keys, subscriptions, and rate limits with 3-tier fallback for cost optimization.",
+      "longDescription": "<p>Smart AI routing gateway that manages API keys, subscriptions, and rate limits with 3-tier fallback for cost optimization.</p>",
+      "tags": [
+        "ai",
+        "router",
+        "api",
+        "gateway",
+        "llm",
+        "proxy",
+        "cost-optimization"
+      ],
+      "repository": "https://github.com/decolua/9router",
+      "image": "https://ghcr.io/decolua/9router",
+      "supported_architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "id": "9Router",
+      "screenshots": [],
+      "artefacts": {},
+      "icon": "",
+      "compose": "https://azrim.github.io/cosmos-source/servapps/9Router/cosmos-compose.json"
+    },
+    {
+      "name": "Hermes Agent",
+      "description": "Autonomous AI agent by Nous Research with persistent memory, self-improving skills, and 24/7 operation.",
+      "longDescription": "<p>Autonomous AI agent by Nous Research with persistent memory, self-improving skills, and 24/7 operation.</p>",
+      "tags": [
+        "ai",
+        "agent",
+        "autonomous",
+        "nous-research",
+        "hermes",
+        "llm"
+      ],
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "image": "https://ghcr.io/nousresearch/hermes-agent",
+      "supported_architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "id": "HermesAgent",
+      "screenshots": [],
+      "artefacts": {},
+      "icon": "",
+      "compose": "https://azrim.github.io/cosmos-source/servapps/HermesAgent/cosmos-compose.json"
+    },
+    {
+      "name": "Immich (No ML)",
+      "description": "Self-hosted photo and video management solution without machine learning. High performance backup and organization for your photos.",
+      "longDescription": "<p>Immich (No ML) is a self-hosted photo and video management solution running without machine learning services. High performance backup and organization for your photos.</p>",
+      "tags": [
+        "photos",
+        "videos",
+        "backup",
+        "gallery",
+        "self-hosted",
+        "google-photos-alternative"
+      ],
+      "repository": "https://github.com/immich-app/immich",
+      "image": "https://azukaar.github.io/cosmos-servapps-official/servapps/Immich/icon.png",
+      "supported_architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "id": "Immich",
+      "screenshots": [],
+      "artefacts": {},
+      "icon": "",
+      "compose": "https://azrim.github.io/cosmos-source/servapps/Immich/cosmos-compose.json"
+    },
+    {
+      "name": "Jellyfin",
+      "description": "Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media.",
+      "longDescription": "<p>Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to proprietary media servers, allowing you to stream media to end-user devices via multiple client applications, web browsers, DLNA, and Chromecast.</p><p>There are no strings attached, no premium licenses or features, and no hidden agendas. Stream your movies, TV shows, music, photos, and live TV from your own server to any device.</p>",
+      "tags": [
+        "media",
+        "server",
+        "streaming",
+        "movies",
+        "tv",
+        "music",
+        "photos",
+        "videos"
+      ],
+      "repository": "https://github.com/jellyfin/jellyfin",
+      "image": "https://hub.docker.com/r/linuxserver/jellyfin",
+      "supported_architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "id": "Jellyfin",
+      "screenshots": [],
+      "artefacts": {},
+      "icon": "",
+      "compose": "https://azrim.github.io/cosmos-source/servapps/Jellyfin/cosmos-compose.json"
+    },
+    {
+      "name": "Navidrome",
+      "description": "Navidrome is an open source web-based music collection server and streamer. It gives you freedom to listen to your music collection from any browser or mobile device.",
+      "tags": [
+        "music",
+        "audio",
+        "streaming",
+        "server",
+        "subsonic",
+        "media"
+      ],
+      "repository": "https://github.com/navidrome/navidrome",
+      "image": "https://hub.docker.com/r/deluan/navidrome",
+      "supported_architectures": [
+        "amd64",
+        "arm64",
+        "arm"
+      ],
+      "id": "Navidrome",
+      "screenshots": [],
+      "artefacts": {},
+      "icon": "",
+      "compose": "https://azrim.github.io/cosmos-source/servapps/Navidrome/cosmos-compose.json"
+    },
+    {
+      "name": "Pi-hole",
+      "description": "Pi-hole is a network-wide ad blocker that acts as a DNS sinkhole, protecting your devices from unwanted ads and trackers without installing any client-side software.",
+      "longDescription": "<p>Pi-hole is a Linux network-level advertisement and Internet tracker blocking application which acts as a DNS sinkhole and optionally a DHCP server, intended for use on a private network. It is designed for low-power embedded devices with network capability, such as the Raspberry Pi, but can be installed on almost any Linux machine.</p><p>Pi-hole blocks ads for all devices on your network without requiring any client-side software. It features a beautiful web-based admin interface for managing and monitoring your DNS queries, blocklists, and whitelists. With Pi-hole, you can also see statistics about the DNS queries on your network, including the number of queries blocked and the domains most frequently accessed.</p>",
+      "tags": [
+        "dns",
+        "ad-blocker",
+        "network",
+        "privacy",
+        "sinkhole",
+        "tracker-blocking",
+        "pihole",
+        "self-hosted"
+      ],
+      "repository": "https://github.com/pi-hole/pi-hole",
+      "image": "https://hub.docker.com/r/pihole/pihole",
+      "supported_architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "id": "Pihole",
+      "screenshots": [],
+      "artefacts": {},
+      "icon": "",
+      "compose": "https://azrim.github.io/cosmos-source/servapps/Pihole/cosmos-compose.json"
+    },
+    {
+      "name": "qBittorrent",
+      "description": "qBittorrent is a free, open-source BitTorrent client. It aims to provide an open-source software alternative to µTorrent.",
+      "longDescription": "<p>qBittorrent is a free, open-source BitTorrent client. It aims to provide an open-source software alternative to µTorrent.</p><p>The qBittorrent project aims to provide an open-source software alternative to µTorrent. Additionally, qBittorrent runs and provides the same features on all major platforms (Linux, macOS, Windows, OS/2, FreeBSD). qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.</p>",
+      "tags": [
+        "torrent",
+        "download",
+        "bittorrent",
+        "p2p",
+        "file sharing"
+      ],
+      "repository": "https://github.com/qbittorrent/qBittorrent",
+      "image": "https://hub.docker.com/r/linuxserver/qbittorrent",
+      "supported_architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "id": "qBittorrent",
+      "screenshots": [],
+      "artefacts": {},
+      "icon": "",
+      "compose": "https://azrim.github.io/cosmos-source/servapps/qBittorrent/cosmos-compose.json"
+    },
+    {
+      "name": "Shoko Anime",
+      "description": "Shoko is an anime cataloging and management program designed to automate the cataloging of your anime collection.",
+      "longDescription": "<p>Shoko is a centralized anime management system designed to automate the cataloging and organization of your anime collection.</p><p>By integrating directly with AniDB, Shoko uses precise file hashing (CRC32) to accurately identify files regardless of filename, fetching detailed metadata, episode information, character lists, and artwork.</p><p>Key features include:</p><ul><li><strong>AniDB Integration:</strong> Automatic identification and metadata matching powered by AniDB.</li><li><strong>Multi-Client Support:</strong> Works as a backend server for Web UI, Shoko Desktop, Jellyfin, Plex, and Emby plugins.</li><li><strong>File Organization:</strong> Automates file renaming, moving, and duplicate management.</li><li><strong>Comprehensive Management:</strong> Tracks watch status, series relations, episode groups, and missing file alerts.</li></ul>",
+      "tags": [
+        "anime",
+        "media",
+        "catalog",
+        "anidb",
+        "management",
+        "library",
+        "metadata"
+      ],
+      "repository": "https://github.com/ShokoAnime/ShokoServer",
+      "image": "https://github.com/ShokoAnime/ShokoServer/pkgs/container/server",
+      "supported_architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "id": "ShokoAnime",
+      "screenshots": [],
+      "artefacts": {},
+      "icon": "",
+      "compose": "https://azrim.github.io/cosmos-source/servapps/ShokoAnime/cosmos-compose.json"
+    }
+  ]
+}
