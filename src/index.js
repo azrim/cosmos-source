@@ -44,10 +44,13 @@ for (const file of servapps) {
     continue;
   }
 
-  // Check if icon.png exists locally, else fallback to external icon URL from description if present
-  const localIconPath = path.join(servappsPath, file, 'icon.png');
-  if (fs.existsSync(localIconPath)) {
+  // Check if icon.png or icon.svg exists locally, else fallback to external icon URL from description if present
+  const localIconPngPath = path.join(servappsPath, file, 'icon.png');
+  const localIconSvgPath = path.join(servappsPath, file, 'icon.svg');
+  if (fs.existsSync(localIconPngPath)) {
     servapp.icon = `${repoURL}/${servappsFolder}/${file}/icon.png`;
+  } else if (fs.existsSync(localIconSvgPath)) {
+    servapp.icon = `${repoURL}/${servappsFolder}/${file}/icon.svg`;
   }
 
   servapp.compose = `${repoURL}/${servappsFolder}/${file}/${composeFileName}`;

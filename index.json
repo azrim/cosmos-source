@@ -270,7 +270,7 @@
       "id": "ShokoAnime",
       "screenshots": [],
       "artefacts": {},
-      "icon": "https://azrim.my.id/cosmos-source/servapps/ShokoAnime/icon.png",
+      "icon": "https://azrim.my.id/cosmos-source/servapps/ShokoAnime/icon.svg",
       "compose": "https://azrim.my.id/cosmos-source/servapps/ShokoAnime/cosmos-compose.json"
     }
   ]
