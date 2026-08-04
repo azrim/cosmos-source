@@ -22,7 +22,7 @@
     "screenshots": [],
     "artefacts": {},
     "icon": "",
-    "compose": "https://azrim.github.io/cosmos-source/servapps/9Router/cosmos-compose.json"
+    "compose": "https://azrim.my.id/cosmos-source/servapps/9Router/cosmos-compose.json"
   },
   {
     "name": "Hermes Agent",
@@ -46,7 +46,7 @@
     "screenshots": [],
     "artefacts": {},
     "icon": "",
-    "compose": "https://azrim.github.io/cosmos-source/servapps/HermesAgent/cosmos-compose.json"
+    "compose": "https://azrim.my.id/cosmos-source/servapps/HermesAgent/cosmos-compose.json"
   },
   {
     "name": "Immich (No ML)",
@@ -70,7 +70,7 @@
     "screenshots": [],
     "artefacts": {},
     "icon": "",
-    "compose": "https://azrim.github.io/cosmos-source/servapps/Immich/cosmos-compose.json"
+    "compose": "https://azrim.my.id/cosmos-source/servapps/Immich/cosmos-compose.json"
   },
   {
     "name": "Jellyfin",
@@ -96,7 +96,7 @@
     "screenshots": [],
     "artefacts": {},
     "icon": "",
-    "compose": "https://azrim.github.io/cosmos-source/servapps/Jellyfin/cosmos-compose.json"
+    "compose": "https://azrim.my.id/cosmos-source/servapps/Jellyfin/cosmos-compose.json"
   },
   {
     "name": "Navidrome",
@@ -120,7 +120,7 @@
     "screenshots": [],
     "artefacts": {},
     "icon": "",
-    "compose": "https://azrim.github.io/cosmos-source/servapps/Navidrome/cosmos-compose.json"
+    "compose": "https://azrim.my.id/cosmos-source/servapps/Navidrome/cosmos-compose.json"
   },
   {
     "name": "Pi-hole",
@@ -146,7 +146,7 @@
     "screenshots": [],
     "artefacts": {},
     "icon": "",
-    "compose": "https://azrim.github.io/cosmos-source/servapps/Pihole/cosmos-compose.json"
+    "compose": "https://azrim.my.id/cosmos-source/servapps/Pihole/cosmos-compose.json"
   },
   {
     "name": "qBittorrent",
@@ -169,7 +169,7 @@
     "screenshots": [],
     "artefacts": {},
     "icon": "",
-    "compose": "https://azrim.github.io/cosmos-source/servapps/qBittorrent/cosmos-compose.json"
+    "compose": "https://azrim.my.id/cosmos-source/servapps/qBittorrent/cosmos-compose.json"
   },
   {
     "name": "Shoko Anime",
@@ -194,6 +194,6 @@
     "screenshots": [],
     "artefacts": {},
     "icon": "",
-    "compose": "https://azrim.github.io/cosmos-source/servapps/ShokoAnime/cosmos-compose.json"
+    "compose": "https://azrim.my.id/cosmos-source/servapps/ShokoAnime/cosmos-compose.json"
   }
 ]
