@@ -21,7 +21,6 @@
     "id": "9Router",
     "screenshots": [],
     "artefacts": {},
-    "icon": "",
     "compose": "https://azrim.my.id/cosmos-source/servapps/9Router/cosmos-compose.json"
   },
   {
@@ -45,7 +44,6 @@
     "id": "HermesAgent",
     "screenshots": [],
     "artefacts": {},
-    "icon": "",
     "compose": "https://azrim.my.id/cosmos-source/servapps/HermesAgent/cosmos-compose.json"
   },
   {
@@ -69,7 +67,6 @@
     "id": "Immich",
     "screenshots": [],
     "artefacts": {},
-    "icon": "",
     "compose": "https://azrim.my.id/cosmos-source/servapps/Immich/cosmos-compose.json"
   },
   {
@@ -95,7 +92,6 @@
     "id": "Jellyfin",
     "screenshots": [],
     "artefacts": {},
-    "icon": "",
     "compose": "https://azrim.my.id/cosmos-source/servapps/Jellyfin/cosmos-compose.json"
   },
   {
@@ -119,7 +115,6 @@
     "id": "Navidrome",
     "screenshots": [],
     "artefacts": {},
-    "icon": "",
     "compose": "https://azrim.my.id/cosmos-source/servapps/Navidrome/cosmos-compose.json"
   },
   {
@@ -145,7 +140,6 @@
     "id": "Pihole",
     "screenshots": [],
     "artefacts": {},
-    "icon": "",
     "compose": "https://azrim.my.id/cosmos-source/servapps/Pihole/cosmos-compose.json"
   },
   {
@@ -168,7 +162,6 @@
     "id": "qBittorrent",
     "screenshots": [],
     "artefacts": {},
-    "icon": "",
     "compose": "https://azrim.my.id/cosmos-source/servapps/qBittorrent/cosmos-compose.json"
   },
   {
@@ -193,7 +186,6 @@
     "id": "ShokoAnime",
     "screenshots": [],
     "artefacts": {},
-    "icon": "",
     "compose": "https://azrim.my.id/cosmos-source/servapps/ShokoAnime/cosmos-compose.json"
   }
 ]

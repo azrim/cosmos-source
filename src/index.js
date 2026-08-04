@@ -48,9 +48,6 @@ for (const file of servapps) {
   const localIconPath = path.join(servappsPath, file, 'icon.png');
   if (fs.existsSync(localIconPath)) {
     servapp.icon = `${repoURL}/${servappsFolder}/${file}/icon.png`;
-  } else if (!servapp.icon) {
-    // If no icon in description either, just leave it or set a default
-    servapp.icon = "";
   }
 
   servapp.compose = `${repoURL}/${servappsFolder}/${file}/${composeFileName}`;
