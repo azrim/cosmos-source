@@ -1,5 +1,5 @@
 {
-  "pageUrl": "https://azrim.github.io/cosmos-source",
-  "marketIndexUrl": "https://azrim.github.io/cosmos-source/servapps.json",
+  "pageUrl": "https://raw.githubusercontent.com/azrim/cosmos-source/main",
+  "marketIndexUrl": "https://raw.githubusercontent.com/azrim/cosmos-source/main/index.json",
   "servappsFolder": "servapps"
 }
