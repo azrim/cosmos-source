@@ -21,6 +21,7 @@
     "id": "9Router",
     "screenshots": [],
     "artefacts": {},
+    "icon": "https://azrim.my.id/cosmos-source/servapps/9Router/icon.png",
     "compose": "https://azrim.my.id/cosmos-source/servapps/9Router/cosmos-compose.json"
   },
   {
@@ -44,6 +45,7 @@
     "id": "HermesAgent",
     "screenshots": [],
     "artefacts": {},
+    "icon": "https://azrim.my.id/cosmos-source/servapps/HermesAgent/icon.png",
     "compose": "https://azrim.my.id/cosmos-source/servapps/HermesAgent/cosmos-compose.json"
   },
   {
@@ -67,6 +69,7 @@
     "id": "Immich",
     "screenshots": [],
     "artefacts": {},
+    "icon": "https://azrim.my.id/cosmos-source/servapps/Immich/icon.png",
     "compose": "https://azrim.my.id/cosmos-source/servapps/Immich/cosmos-compose.json"
   },
   {
@@ -92,6 +95,7 @@
     "id": "Jellyfin",
     "screenshots": [],
     "artefacts": {},
+    "icon": "https://azrim.my.id/cosmos-source/servapps/Jellyfin/icon.png",
     "compose": "https://azrim.my.id/cosmos-source/servapps/Jellyfin/cosmos-compose.json"
   },
   {
@@ -115,6 +119,7 @@
     "id": "Navidrome",
     "screenshots": [],
     "artefacts": {},
+    "icon": "https://azrim.my.id/cosmos-source/servapps/Navidrome/icon.png",
     "compose": "https://azrim.my.id/cosmos-source/servapps/Navidrome/cosmos-compose.json"
   },
   {
@@ -140,6 +145,7 @@
     "id": "Pihole",
     "screenshots": [],
     "artefacts": {},
+    "icon": "https://azrim.my.id/cosmos-source/servapps/Pihole/icon.png",
     "compose": "https://azrim.my.id/cosmos-source/servapps/Pihole/cosmos-compose.json"
   },
   {
@@ -162,6 +168,7 @@
     "id": "qBittorrent",
     "screenshots": [],
     "artefacts": {},
+    "icon": "https://azrim.my.id/cosmos-source/servapps/qBittorrent/icon.png",
     "compose": "https://azrim.my.id/cosmos-source/servapps/qBittorrent/cosmos-compose.json"
   },
   {
@@ -186,6 +193,7 @@
     "id": "ShokoAnime",
     "screenshots": [],
     "artefacts": {},
+    "icon": "https://azrim.my.id/cosmos-source/servapps/ShokoAnime/icon.png",
     "compose": "https://azrim.my.id/cosmos-source/servapps/ShokoAnime/cosmos-compose.json"
   }
 ]
