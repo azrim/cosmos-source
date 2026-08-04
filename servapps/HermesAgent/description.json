@@ -11,9 +11,10 @@
     "llm"
   ],
   "repository": "https://github.com/NousResearch/hermes-agent",
-  "image": "https://ghcr.io/nousresearch/hermes-agent",
+  "image": "https://hub.docker.com/r/nousresearch/hermes-agent",
   "supported_architectures": [
     "amd64",
     "arm64"
   ]
 }
+

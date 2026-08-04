@@ -2,7 +2,7 @@
   "minVersion": "0.7.6",
   "services": {
     "{ServiceName}": {
-      "image": "ghcr.io/nousresearch/hermes-agent:latest",
+      "image": "nousresearch/hermes-agent:latest",
       "container_name": "{ServiceName}",
       "hostname": "{ServiceName}",
       "restart": "unless-stopped",
@@ -39,3 +39,4 @@
     }
   }
 }
+
